@@ -1,3 +1,0 @@
-2018-09-20 16:56:11 Event logging started
-2018-09-20 16:56:14 HTTP client 192.168.1.78 login succeeded
-2018-09-20 16:56:30 Event logging stopped
