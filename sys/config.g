@@ -3,10 +3,10 @@
 ;
 
 ; General preferences
-G21						; Work in millimetres
-G90                                             ; Send absolute coordinates...
+G21						                          ; Work in millimetres
+G90                                               ; Send absolute coordinates...
 ; M83                                             ; ...but relative extruder moves
-M555 P1						; Set firmware compatibility to look like RepRapFirmware
+M555 P1						                      ; Set firmware compatibility to look like RepRapFirmware
 
 ; Network
 M550 Pe3                                           ; Set machine name
@@ -19,11 +19,11 @@ M586 P2 S0                                         ; Disable Telnet
 ; Drives
 M569 P0 S1                                         ; Drive 0 (X) goes forward
 M569 P1 S1                                         ; Drive 1 (Y) goes backwards
-M569 P2 S0			                   ; Drive 2 (Z) goes backwards
+M569 P2 S0			                               ; Drive 2 (Z) goes backwards
 M569 P3 S1                                         ; Drive 3 (E) goes forwards
 M350 X16 Y16 Z16 E16 I1                            ; Configure microstepping with interpolation
 
-M92 X80.48 Y80 Z402.81 E530 	   		    ; Set steps per mm
+M92 X80.48 Y80 Z402.81 E530 	   		           ; Set steps per mm
 
 
 M566 X1000 Y1000 Z100 E30000                       ; Set maximum instantaneous speed changes (mm/min)
@@ -41,7 +41,7 @@ M208 X258.5 Y246 Z260 S0                           ; Set axis maxima
 
 ; Endstops
 M574 X1 Y1 S3                                      ; Set endstops controlled by motor l
-M915 X Y S1 R3 F0       			   ; set X and Y to sensitivity 1, when stall home XY and resume print, unfiltered so it does not takes 4 steps to figure out it has stalled.
+M915 X Y S1 R3 F0       			               ; set X and Y to sensitivity 1, when stall home XY and resume print, unfiltered so it does not takes 4 steps to figure out it has stalled.
 
 
 ; Z-Probe
@@ -62,6 +62,9 @@ M557 X50:185 Y50:185 S65                    ; Define mesh grid    M557 X20:215 Y
 M375					    ; Load height map from file (same as G29 S1)
 
 ; Heaters
+
+M307 H0 A90.0 C700.0 D10.0 S1.00 V0.0 B1	 	
+M307 H1 A296.1 C172.5 D5.2 S0.50 V24.9 B0	          ; Created with M303 H1 P0.5 S200
 
 M305 P0 T100000 B4092 R4700                           ; set thermistor + ADC parameters for heater 0
 M305 P1 T100000 B4092 R4700                           ; set thermistor + ADC parameters for heater 1
