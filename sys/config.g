@@ -63,14 +63,11 @@ M375					    ; Load height map from file (same as G29 S1)
 
 ; Heaters
 
-; M305 P0 T97700 B4619 C9.743561e-8 R2200
-; M305 P1 T97700 B4619 C9.743561e-8 R2200
+M305 P0 T100000 B4092 R4700                           ; set thermistor + ADC parameters for heater 0
+M305 P1 T100000 B4092 R4700                           ; set thermistor + ADC parameters for heater 1
 
-M305 P0 T100000 B4138 C0 R4700                     ; Set thermistor + ADC parameters for heater 0
-M143 H0 S120                                       ; Set temperature limit for heater 0 to 120C
-
-M305 P1 T100000 B4138 C0 R4700                     ; Set thermistor + ADC parameters for heater 1
-M143 H1 S280                                       ; Set temperature limit for heater 1 to 280C
+M143 H0 S120                                          ; Set temperature limit for heater 0 to 120C
+M143 H1 S280                                          ; Set temperature limit for heater 1 to 280C
 
 
 ; config-override heeft nu onderstaande setting
